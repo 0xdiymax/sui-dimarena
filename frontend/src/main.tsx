@@ -5,7 +5,7 @@ import "@radix-ui/themes/styles.css";
 import "./index.css";
 import { SuiClientProvider, WalletProvider } from "@mysten/dapp-kit";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router";
+import { HashRouter, Routes, Route } from "react-router";
 import { networkConfig } from "./config/networkConfig";
 import { Layout } from "./components/Layout";
 import { Home } from "./pages/Home";
@@ -19,7 +19,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <QueryClientProvider client={queryClient}>
       <SuiClientProvider networks={networkConfig} defaultNetwork="testnet">
         <WalletProvider autoConnect>
-          <BrowserRouter>
+          <HashRouter>
             <Toaster position="top-center" richColors />
             <Routes>
               <Route element={<Layout />}>
@@ -28,7 +28,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
                 <Route path="/battle-arena/:battleId" element={<BattleArena />} />
               </Route>
             </Routes>
-          </BrowserRouter>
+          </HashRouter>
         </WalletProvider>
       </SuiClientProvider>
     </QueryClientProvider>

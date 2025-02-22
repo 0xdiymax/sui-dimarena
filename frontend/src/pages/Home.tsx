@@ -18,6 +18,7 @@ import {
 import { Button } from "@/components/ui/button"
 import { GlareCard } from "@/components/ui/glare-card"
 import { Loader2 } from "lucide-react"
+import { NavLink } from "react-router";
 
 export function Home() {
   const [flippedCards, setFlippedCards] = useState<number[]>([]);
@@ -277,14 +278,15 @@ export function Home() {
               </DialogContent>
             </Dialog>
 
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="px-8 py-6 text-lg bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white"
-              onClick={() => window.location.href = '/battle'}
-            >
-              开始对战
-            </Button>
+            <NavLink to="/battle">
+              <Button 
+                variant="outline" 
+                size="lg"
+                className="px-8 py-6 text-lg bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white"
+              >
+                开始对战
+              </Button>
+            </NavLink>
           </motion.div>
         </div>
       </div>
