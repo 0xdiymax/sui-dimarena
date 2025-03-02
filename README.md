@@ -1,50 +1,51 @@
 # Sui Dimensional Arena
 
-Sui Dimensional Arena 是一个基于 Sui 区块链的卡牌对战游戏。玩家可以收集独特的动漫角色卡牌,并在竞技场中与其他玩家进行战斗。
+[English](README.md) | [中文](README_CN.md)
 
-## 主要功能
+Sui Dimensional Arena is a card battle game built on the Sui blockchain. Players can collect unique anime character cards and battle with other players in the arena.
 
-- **卡牌铸造**: 玩家可以铸造独特的动漫角色 NFT 卡牌
-- **卡牌属性**: 每张卡牌具有攻击和防御属性
-- **对战系统**: 玩家可以创建或加入战斗,通过回合制的方式进行对战
-- **胜利奖励**: 获胜者的卡牌将得到属性提升
+## Key Features
 
-## 玩法
-![图 0](https://img.maxdiy10.com/2025-02/README-1740233564905.png)  
-![图 1](https://img.maxdiy10.com/2025-02/README-1740233682001.png)  
+- **Card Minting**: Players can mint unique anime character NFT cards
+- **Card Attributes**: Each card has attack and defense attributes
+- **Battle System**: Players can create or join battles and engage in turn-based combat
+- **Victory Rewards**: Winners' cards receive attribute boosts
 
+## Gameplay
+![Image 0](https://img.maxdiy10.com/2025-02/README-1740233564905.png)  
+![Image 1](https://img.maxdiy10.com/2025-02/README-1740233682001.png)  
 
-## 技术栈
+## Tech Stack
 
-### 前端
+### Frontend
 - React + TypeScript
 - Vite
 - @mysten/dapp-kit
 - Tailwind CSS
 - Framer Motion
 
-### 智能合约
-- Move 语言
-- Sui 区块链
+### Smart Contracts
+- Move Language
+- Sui Blockchain
 
-## 开发环境设置
+## Development Setup
 
-1. 安装依赖:
+1. Install dependencies:
 
 ```bash
-# 前端
+# Frontend
 cd frontend
 pnpm install
 
-# 合约
+# Contracts
 cd contracts
 sui move build
 ```
 
-2. 运行开发服务器:
+2. Run development server:
 
 ```bash
-# 前端
+# Frontend
 cd frontend
 pnpm dev
 ```
